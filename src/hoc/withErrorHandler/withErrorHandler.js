@@ -5,9 +5,12 @@ import Aux from '../Auxillary/Auxillary';
 
 const withErrorHandler = (WrappedComponent, axios) => {
   return class extends Component {
-    state = {
-      error: null,
-    };
+    constructor(props) {
+      super(props);
+      this.state = {
+        error: null,
+      };
+    }
 
     componentDidMount() {
       axios.interceptors.request.use((req) => {
