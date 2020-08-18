@@ -47,6 +47,7 @@ class ContactData extends Component {
           required: true,
           minLength: 6,
           maxLength: 6,
+          isNumeric: true,
         },
         valid: false,
         touched: false,
